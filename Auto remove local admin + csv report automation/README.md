@@ -1,5 +1,5 @@
 # Auto remove local admin + csv report automation
 
-### Description
+## Description
 JumpCloud is a great devices and users management tool. but one of the things that frustrate me the most is the fact that I can't give my end users specific permissions to a file, directory, or program, without digging deep into each user's registry or group policy. So if one of my teammates or I gave support to an end user and we needed to do all kinds of stuff on the user's computer that demands admin privileges, we always tend to forget to remove the user's Sudo/Administrator privileges. So from all the frustration, I've written this automation that generates a SCV report of all the users with administrator privileges on their device and removes it automatically, with exception of a few selected users and devices. You can place the automation in a task scheduler to run it automatically from a remote server.
-
+## Requirements
