@@ -39,13 +39,13 @@ Some Text...
 "
 # Message credentials
 Send-MailMessage `
-    -SmtpServer smtp.office365.com `
+    -SmtpServer smtp.office365.com ` # SMTP Server
     -UseSsl `
-    -Port 587 `
-    -From "Sender@Example.com" `
-    -to "Resever@Example.como" `
-    -Subject "Subject" `
-    -Credential $credential `
-    -Attachments $csvpath `
-    -Body $MailBody
+    -Port 587 ` # SMTP Port
+    -From "Sender@Example.com" ` # Sender address
+    -to "Resever@Example.como" ` # Receiver address
+    -Subject "Subject" ` # Message Decription 
+    -Credential $credential ` # Do Not Touch
+    -Attachments $csvpath ` # Do Not Touch
+    -Body $MailBody # Do Not Touch
 ```
