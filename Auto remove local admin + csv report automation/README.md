@@ -16,6 +16,7 @@ The code is divided into 3 sections:
 2. Remove all local admins form the from the device that aren't in the excluded devices list.
 3. Sends the report the a selected email via a SMTP server (smtp.office365.com in my case).
 
+
 The excluded users and devices lists (accepts strings of the devices and usernames):
 ```nh
 # Excluded systems and users
