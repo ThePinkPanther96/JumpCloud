@@ -10,4 +10,16 @@ JumpCloud is a great devices and users management tool. but one of the things th
 Install-Module JumpCloud
 ```
 ## Installation
-Just enter the code and fill in the information according to the comments.
+Enter the code file and fill in the information according to the comments.
+The code is divided into 3 sections:
+1. Gets all of the local admins from all the devices in your tenant that are not in the excluded devices or users list.
+2. Remove all local admins form the from the device that aren't in the excluded devices list.
+3. Sends the report the a selected email via a SMTP server (smtp.office365.com in my case).
+
+### The excluded users and devices lists (accepts strings of the devices and usernames):
+```nh
+# Excluded systems and users
+
+$Exclude_Users = @()
+$Exclude_Devices = @()
+```
