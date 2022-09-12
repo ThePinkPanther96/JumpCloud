@@ -9,3 +9,5 @@ JumpCloud is a great devices and users management tool. but one of the things th
 ```nh
 Install-Module JumpCloud
 ```
+## Installation
+Just enter the code and fill in the information according to the comments.
