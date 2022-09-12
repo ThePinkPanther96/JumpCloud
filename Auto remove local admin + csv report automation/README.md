@@ -24,3 +24,28 @@ The excluded users and devices lists (accepts strings of the devices and usernam
 $Exclude_Users = @()
 $Exclude_Devices = @()
 ```
+
+In the Email credentials section you can set the sender email address, message description and message body.
+```nh
+#email credentials
+$password = ConvertTo-SecureString 'Password' -AsPlainText -Force # Enter password for the sender email
+$credential = New-Object System.Management.Automation.PSCredential ('Sender@Example.com', $password) # Enter sender eamil address
+
+#message settings 
+$MailBody = "
+              
+Some Text...
+
+"
+# Message credentials
+Send-MailMessage `
+    -SmtpServer smtp.office365.com `
+    -UseSsl `
+    -Port 587 `
+    -From "Sender@Example.com" `
+    -to "Resever@Example.como" `
+    -Subject "Subject" `
+    -Credential $credential `
+    -Attachments $csvpath `
+    -Body $MailBody
+```
