@@ -6,6 +6,7 @@ JumpCloud is a great devices and users management tool. but one of the things th
 - Windows 10 or higher 
 - PowerShell 5 or higher
 - JumpCloud PowerShell moudle
+- Active JumpCloud account 
 ```nh
 Install-Module JumpCloud
 ```
