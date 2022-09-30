@@ -70,12 +70,15 @@ function new_device {
         [string]$hostname
     )
     if (Get-JCSystem -hostname $hostname) {
+        Write-Host "Binding device to groups..." -ForegroundColor "Yellow"
+
         foreach ($group in $device_groups){
             Add-JCSystemGroupMember -GroupName $group -SystemID $device_bind.SystemID
         }
         Write-Host "Divice bind with groups!" -ForegroundColor "Yellow" -BackgroundColor "DarkGreen"    
     }
-    
+    Write-Host "Binding device to user..." -ForegroundColor "Yellow"
+
     $sys_id = Get-JcSystem | Where-Object { $_.hostname -eq $hostname }
     Add-JCSystemUser -SystemID $sys_id._id -Username $username -Administrator $False
 
@@ -93,6 +96,8 @@ function change_device_name {
         [string]$username
     )   
     if ((Get-JCSystem -hostname $hostname)){  
+        Write-Host "Setting Dispalay Name..." -ForegroundColor "Yellow"
+
         foreach ($device in $new_device){
             $new_device = $device | Where-Object {$_.hostname -eq $hostname}
         }
@@ -155,11 +160,14 @@ while ($True) {
         change_device_name
         send_meassage
 
-        break
+        Write-Host "Job Ended
+        Closing program..." -ForegroundColor "Yellow"
+        Start-Sleep -Seconds 2
+        exit
+
     }
     else {
         Write-Host "No Input." -ForegroundColor "Red"
     }
 
-}   
-
+}  
