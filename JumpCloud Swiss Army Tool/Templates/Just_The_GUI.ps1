@@ -217,7 +217,7 @@ $MsgBoxError = [System.Windows.Forms.MessageBox]
 $Form.controls.AddRange(@($Titel,$Description,$Titel2,$Titel3,$Firstname,$Lastname,
 $Firstnametext,$Lastnametext,$Usernametext,$deviceetext,$Groupdropmenu,$Devicename,$Titel4,$Groupname, 
 $RunBtn,$cancelBtn,$pictureBox,$Usernamex,$User_id,$User_idtext,$statustext, $status))
-# THIS SHOULD BE AT THE END OF YOUR SCRIPT FOR NOW
+# THIS SHOULD BE ALWAYS AT THE END OF THE GUI PART OF THE SCRIPT
 # Display the form
 
 $cancelBtn.Add_Click({ cancel })
