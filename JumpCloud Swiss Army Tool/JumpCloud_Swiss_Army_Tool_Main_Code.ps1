@@ -6,7 +6,7 @@ Add-Type -AssemblyName System.Drawing
 #---------------------------------------------------------------[Form]-------------------------------------------------------------
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
-$mailtaitel = "JumpCloud Swiss Army Tool v1.2"
+$mailtaitel = "JumpCloud Swiss Army Tool v1.3"
 # Create a new form
 $Form                             = New-Object system.Windows.Forms.Form
 # Define the size, title and background color
@@ -126,7 +126,7 @@ $Groupname.location                = New-Object System.Drawing.Point(310,210)
 $Groupname.Font                    = 'Microsoft Sans Serif,10'
 
 $Groupdropmenu                     = New-Object system.Windows.Forms.ComboBox
-$Groupdropmenu.text                = "Select"
+$Groupdropmenu.text                = ""
 $Groupdropmenu.width               = 120
 $Groupdropmenu.autosize            = $true
 # Add the items in the dropdown list
