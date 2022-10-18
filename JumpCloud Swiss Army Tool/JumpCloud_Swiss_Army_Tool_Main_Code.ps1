@@ -278,7 +278,7 @@ function create_user {
     
     $email = $email
     $display_name = [string]::Concat($Firstnametext.Text, " ", $Lastnametext.Text)
-    $url = "@chain-reaction.io"
+    $url = "@Example.com"  ## ENTER THE EMAIL ADDRESS HERE
     $email = [string]::Concat($Usernametext.Text, $url)
     try {
         if (!(Get-JCUser -username $Usernametext.Text)){
@@ -370,7 +370,7 @@ function create_device () {
         if ($deviceetext.Text){
 
             $new_device = Get-JCSystemInsights -Table SystemInfo | Where-Object {$_.hostname -eq $deviceetext.Text}
-            $new_devicedisplayname = [string]::Concat("ILYK-", $Usernametext.Text.ToUpper(), "-LP")
+            $new_devicedisplayname = [string]::Concat("PC-", $Usernametext.Text.ToUpper(), "-LP")
             
             if ((Get-JCSystem -hostname $deviceetext.Text)){  
                 
